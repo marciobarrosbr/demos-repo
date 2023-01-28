@@ -1,48 +1,43 @@
-#first_name = "bro"
-#print(type(first_name))
-#last_name = "code"
-#full_name = first_name+" " +last_name
-#print("hello "+full_name)
+def add(a, b):
+    answer = a + b
+    print(str(a) + " + "  + str(b) + " = " + str(answer) + "\n")
+def sub(a, b):
+    answer = a - b
+    print(str(a) + " - " + str(b) + " = " + str(answer) + "\n")
+def mul(a, b):
+    answer = a * b
+    print(str(a) + " * " + str(b)  + " = " + str(answer) + "\n")
+def div(a, b):
+    answer = a / b
+    print(str(a) + " / " + str(b)  + " = " + str(answer) + "\n")
 
-#age = 21
-#age +=1
-#print(age)
-#print("yor age is: "+str(age))
-
-#height = 250.5
-#print("Your height is: "+str(height)+"cm")
-#print(type(height))
-
-#human = True
-#print(human)
-#print("are you a huma:"+str(human))
-
-#name = "Bro"
-#age = 21
-#attractive = True
-#name, age, attractive = "bro", 21, True
-
-#print(name)
-#rint(age)
-#print(attractive)
-
-#spongebob = 30
-#Patrick = 30
-#Sandy = 30
-#Squidward = 30
-#Spongebob = patrick = Sandy = Squidward = 30
-
-#print(Spongebob)
-
-#STRING METHODS
-
-#name = "Bro"
-#print(name.find(name)) #find() indica o posicionamento do caractere dentro da cadeia, no caso “Bro Code” ‘B’ está na primeira posição que é zero#
-#print(name.capitalize()) #capitalize() poe o primeirop caracter em caixa alta#
-#print(name.upper()) #upper() apresenta toda a cadeia de caracter em caixa alta#
-#print(name.lower()) #lower() apresenta toda a cadeia de carater em caixa baixa"
-#print(name.isdigit()) #isdigit() retorna o resultado logico 'booleano' que so é verdadeiro quando a cadeia é foramada somente por numeros, sem espaços letras ou qualquer tipo de caracter
-#print(name.isalpha()) #isalpla() retorna o resultado logico 'booleano' que so é verdadeiro quando a cadeia é foramada somente por lestras do alfaberto, sem espaços numeros ou qualquer tipo de caracter
-#print(name.count("e")) #cont("") conta os caracteres dentro da cadeia que pode ser um em especifico ou quantos ao todo quando não especificado
-#print(name.replace("o","a")) # replace() substitui o primeiro elento pelo segundo
-#print(name*3) #tambem é possivel repetir a cadeia de caracter fazendo essa multiplcação de variavel
+while True:
+    print("A. Addition")
+    print("B. Subtration")
+    print("C. Multiplication")
+    print("D. Division")
+    print("E. Exit")
+    choice = input("input ypur choice: ")
+    if choice == "a" or choice == "A":
+        print("Addition")
+        a = int(input("input first number: "))
+        b = int(input("input second number: "))
+        add(a, b)
+    elif choice == "b" or choice == "B":
+        print("Subtraction")
+        a = int(input("input fist number: "))
+        b = int(input("input second number: "))
+        sub(a, b)
+    elif choice == "c" or choice == "C":
+        print("Multiplication")
+        a = int(input("input first number: "))
+        b = int(input("input second number: "))
+        mul(a, b)
+    elif choice == "d" or choice == "D":
+        print("Division")
+        a = int(input("input firs number: "))
+        b = int(input("Input second number: "))
+        div(a, b)
+    elif choice == "e" or choice == "E":
+        print("progran ended")
+        quit()
