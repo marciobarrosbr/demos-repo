@@ -1,0 +1,27 @@
+git init <estando dentro do repositorio "git init" inicializa no novo repositorio os arquivo do git para torna-lo acessivel a GitHub>
+git clone <endereço URL do projeto no GitHub>
+git status <após qualquer mudança no diretório ou no código antes de prossegui com as próximas etapas>
+git add <nome do arquivo.extesão> {um arquivo novo é um arquivo "untracked". Depois de cria-lo deve informar sua existência pelo add, o mesmo vale para mudança e salvamentos}
+git commit -m <"info de mudança"(primeito texto)> -m <"segundo texto"(opcional){apos <git add> do passo anterior}
+git push origin <branch> <push significa levar da máquina local pro repositorio remoto, de origin to main sendo "main" o "branch" ao qual vc vai fazer o upload no site> o "branch" precisa está definido do site antes de fazer o upload
+•	Se a pasta é nova e local, não há um branch ao qual o arquivo fará parte no site GitHub por isso o comado anterior não vai funcionar até que exista uma pasta com mesmo nome e um "branch" no site 
+•	git remote add ogirin URL http://... Endereço URL da pasta de mesmo nome criada diretamente no site GitHub
+•	get origin -v <verifica o status do comando acima>
+git branch <apresenta o branch em que você está e os outros branch>
+•	Git checkout –b <nome do novo branch>
+•	git branch – D <nome do branch que vc vai deletar>
+•	git checkout <nome do branch que vc quer ir>
+git pull <origin> <máster> <atualiza o seu  “branch local” origin <- máster com “branch remoto máster ou main”  
+o comando abaixo resouve esse problema, o URL é o enderço da pasta de mesmo nome
+fatal: refusing to merge unrelated histories
+O erro fatal: refusing to merge unrelated histories geralmente acontece quando você tenta fazer o git pull de um repositório remoto, mas o seu repositório local possuí um histórico de commits, branches, etc, diferente do que está no repositório remoto.
+Para permitir que o Git faça o merge de dois projetos com históricos diferentes, é só passar o parâmetro --allow-unrelated-histories quando for fazer o pull, assim:
+git pull origin master --allow-unrelated-histories
+(lembre-se de trocar os nomes do remote e branch para os que você utiliza)
+
+•	Ao fazer o pull origin máster, e editar um arquivo que veio junto README.md foi foi possível concluir o merge que o erro acima impedia
+git reset -HARD {vai voltar um reset atras, como o undo}
+git reset -HARD~1 {vai volta 02 reset atrás, o do hard e o 1, se ao invés de 1 estivesse 02 seria ao total 03 reset}
+git log (enumera todas as mudança feitas com uma chave para ser copiada e usada para o reset no ponto desejado}
+git reset -- hard <codigo copiado do log> { restará até o ponto}
+git merge main feature-01 {faz o merge no git local entre branch principal e branch de trabalho}

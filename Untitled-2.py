@@ -1,69 +1,65 @@
-def add(a, b):
-    answer = a + b
-    print(str(a) + " + "  + str(b) + " = " + str(answer) + "\n")
-def sub(a, b):
-    answer = a - b
-    print(str(a) + " - " + str(b) + " = " + str(answer) + "\n")
-def mul(a, b):
-    answer = a * b
-    print(str(a) + " * " + str(b)  + " = " + str(answer) + "\n")
-def div(a, b):
-    answer = a / b
-    print(str(a) + " / " + str(b)  + " = " + str(answer) + "\n")
+import random
 
-while True:
-    print("A. Addition")
-    print("B. Subtration")
-    print("C. Multiplication")
-    print("D. Division")
-    print("E. Exit")
-    choice = input("input ypur choice: ")
-    if choice == "a" or choice == "A":
-        print("Addition")
-        a = int(input("input first number: "))
-        b = int(input("input second number: "))
-        add(a, b)
-    elif choice == "b" or choice == "B":
-        print("Subtraction")
-        a = int(input("input fist number: "))
-        b = int(input("input second number: "))
-        sub(a, b)
-    elif choice == "c" or choice == "C":
-        print("Multiplication")
-        a = int(input("input first number: "))
-        b = int(input("input second number: "))
-        mul(a, b)
-    elif choice == "d" or choice == "D":
-        print("Division")
-        a = int(input("input firs number: "))
-        b = int(input("Input second number: "))
-        div(a, b)
-    elif choice == "e" or choice == "E":
-        print("progran ended")
-        quit()
+exit = False
+user_input = 0
+computer_input = 0
 
-def binary_search(list, element):
-    middle = 0
-    start = 0
-    end = len(list)
-    steps = 0
-    
-    while(start<=end):
-        print("Step", steps, ":" ,str(list[start:end+1]))
-        steps = steps+1
-        middle = (start + end // 2)
+while exit == False:
+    options = ["rock", "paper", "scissors"]
+    user_input = input("Choise rock, paper, scissors or exit: ")
+    computer_input = random.choise(option)
 
-        if element == list[middle]  :
-            return middle
-        if element < list[middle]:
-            end = middle -1
-        else:
-            star = middle +1
+    if user_inout == "exit":
+        print("gamer ended")
+        print("you won a total score of " +str(user_points)+" and the computer total score is " +str(computer_points))
+        exit = True
 
-    return -1
+        if user_input == "rock":
+            if computer_input == "rock":
+                print("your input is rock")
+                print("computer input is rock")
+                print("it is a tie!")
+            elif computer_input == "paper":
+                print("your input ios rock")
+                print("computer input is paper")
+                print ("computer win")
+                computer_points += 1
+            elif computer_input == 'scissors':
+                print("your input is rock")
+                print("computer input is scissors")
+                print("you win")
+                user_input += 1
 
+            elif user_input == "paper":
+                if computer_input == "rock":
+                    print("ypur input id paper")
+                    print("computer input is rock")
+                    print("you win!")
+                    user_input  +=1
+                elif computer_input == "paper":
+                    print("your input is paper")
+                    print("computer input is paper")
+                    print("it is a tie!")
+                elif computer_input  == "scissors":
+                    print("your input is paper")
+                    print("computer input is scissors")
+                    print("computer win")
+                    computer_input += 1
 
-my_list = [1,2,3,4,5,6,7,8,9,10,11,12]
-target = 12
-
-binary_search(my_list, target)
+            elif user_input == "scissors":
+                if computer_input == "rock":
+                    print("your input is scissors")
+                    print("computer input is paper")
+                    print("computer win")
+                    computer_input += 1
+                elif computer_input == "paper":
+                    print("ypur input is scissors")
+                    print("computer in scissors")
+                    print("you win!")
+                    user_input += 1
+                elif computer_input == "scissors":
+                    print("your input scissors")
+                    print("computer input is scissors")
+                    print("its is a tie!")
+                elif user_input != "rock" or user_input != "paper" or user_input != "scissors":
+                    print("invalid Input")
