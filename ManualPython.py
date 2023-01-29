@@ -17,6 +17,7 @@
 #print(human)
 #print("are you a huma:"+str(human))
 
+# MULTIPLE ASSIGMENT = alows us to assgn multiple variables at the same time in line code
 #name = "Bro"
 #age = 21
 #attractive = True
@@ -37,6 +38,7 @@
 #STRING METHODS
 
 #name = "Bro"
+#print(len(name)) # len() indica a quantidade de caracteres "da variavel" chamado lengh method
 #print(name.find(name)) #find() indica o posicionamento do caractere dentro da cadeia, no caso “Bro Code” ‘B’ está na primeira posição que é zero#
 #print(name.capitalize()) #capitalize() poe o primeirop caracter em caixa alta#
 #print(name.upper()) #upper() apresenta toda a cadeia de caracter em caixa alta#
@@ -107,9 +109,91 @@
 # begins with a negative index of minus one and the character on the left of that would be it´s as if you´re counting backwards (contando de tras pra frente, da direita pra esquerda).
 #Toda essa explicação para executar o exercio abaixo
 
-website1 = "http://google.com"
-website2 = "http://wikipedia.com"
+#website1 = "http://google.com"
+#website2 = "http://wikipedia.com"
 
-slice = slice(7,-4) # portando com objetivo de obter o dominio do site é usado o metodo de negative index no metodo slice. Não funciona o metodo index! Dai usar o metodo index para presentar
-print(website1[slice])
-print(website2[slice])
+#slice = slice(7,-4) # portando com objetivo de obter o dominio do site é usado o metodo de negative index no metodo slice. Não funciona o metodo index! Dai usar o metodo index para presentar
+#print(website1[slice])
+#print(website2[slice])
+
+# if STATEMENT = a code of code that will execute if it´s condition is 
+
+#age = int(input("How old are you?: "))
+#if age == 100: # == são usados em condição de iqualdade, comparação
+#    print("You are a centuty old!")
+#elif age >= 18:
+#    print("You are an adult!")
+#elif age < 0: # a partir da condição if, podemos acidinar as demais codição com retorno verdadeiro com o comando elif
+#    print ("you haven t been born yet")
+#else: # se a condição if e elif não é verdadeira a condição else é executada 'senao'. else vem por ultimo quando todas as condiçoes if elif forem falsas
+#    print("You are a child!")
+
+# LOGICAL OPERATORS (and, or,not) = used to check if or two more condition etatment is true
+
+#temp = int(input("What is the temprerature outside?: "))
+#if not temp >= 0 and temp <= 30: 
+#    print("the temperature is goof today")
+#    print("go outside!")
+#elif not temp < 0 or temp > 30:
+#    print("the tempetature is bad today")
+#    print("stay inside")
+
+#WHILE LOOP = a statement that will execute it´s block of code, as long as it´s confition remains true
+
+#name = None
+#while not name:
+#    name = input("enter your name: ")
+#print("helo "+name)
+
+# FOR LOOP = a statement that will executeit´s block of code a limited amount of times
+#import time
+#for i in range(10):
+#    print(i)
+
+#for i in range(50,60+1): #the first number is inclusive and and the second number is exclusive
+#    print(i)
+#for i in range(50, 70+1,2): #,2 é o inclemento
+#    print(i)
+
+#for i in "marcio barros": # em Python o comando tambem trabalha com strings 
+#    print(i)
+
+#for seconds in range(10,0,-1):
+#    print(seconds)
+#    time.sleep(1)
+#print("Happy New Year!")
+
+#NESTED LOOPS = The "inner loop" will finish all of it´s interations before finishing one iterationof the "outer lool"
+
+#rows = int(input("How many rows?: "))
+#columns = int(input("How many columns? : "))
+#symbol = input("Enter a symbol to use: ")
+
+#for i in range(rows):
+#    for j in range(columns):
+#        print(symbol,end="") # em print o end="" faz com que seja apresentado na hoizontal, sem ele is items serão escritos um por um na vertical
+#    print()
+
+# LOOP CONTROL STETEMENTS =  change a loops execution from its normal sequence
+
+# break = used to terminate the loop entirely
+# continue = skips to the next iterarionof the loop
+# pass = does nothing, acts as a placeholder
+ 
+#while True:
+#    name = input("Enter your name: ")
+#    if name != "":
+#        break # Esse é o brack, encerra o Loop
+
+#phone_number = "123-456-7890"
+
+#for i in phone_number:
+#    if i == "-":
+#        continue #skips to the next iterarion of the loop
+#    print(i, end="") #em print o end="" faz com que seja apresentado na hoizontal, sem ele is items serão escritos um por um na vertical
+
+#for i in range(1,21):# lebre-se em um range o ultimo número exclusive ou seja a contagem vai ate 20
+#    if i == 13:
+#        pass # does nothing, acts as a placeholder
+#    else:
+#        print(i,end=" ")
