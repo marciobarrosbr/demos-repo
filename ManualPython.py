@@ -197,3 +197,26 @@
 #        pass # does nothing, acts as a placeholder
 #    else:
 #        print(i,end=" ")
+
+# LIST = used to store multiple itens in a single variable
+
+#food = ["pizza","hamburger","hotdog","spagetti"] # List é uma matrix de uma dimenção cujo indices comçam a patir do zero
+#food[0] = "sushi" # aqui o indice 0 foi atualizado com novo indice, de pizza passou a ser sushi
+# food.append("ice cream") # food.append("x") acresenta o elemento x ao final da matriz ou list
+#food.remove("hotdog") # food.remove("x") remove o elemento da matriz list
+#food.pop() # food.pop() remove o ultimo elemento da matriz list
+#food.insert(0,"cake") # food.insert(x,"y") insere o elemento(y) no inidice(x), consequentemente o demais elementos são reposisionados uma posição a frente
+#food.sort() # food.sort() ordena a lista em orde alfabetica
+#food.clear() # food.clear() # esvazia a lista, elimina os elementos
+#for x in food: #apresentaçao basicas dos elemtos da matrix ou list food
+#    print(x)
+#print(food[0]) # forma busca um elemento da lista   
+
+# 2Dlist = a list of list
+
+#drinks = ["coffe","soda","tea"] # lista de drinks, pizza  e dessert cada uma delas possui seus indice individuais com contagem a partir do zero
+#dinner = ["pizza","hamburger","hotdog"]
+#dessert = ["cake","ice cream"]
+#food = [drinks,dinner,dessert] # a list food contem em si as matrizes indicadas separadas por virgula 
+# y são os indices individuais contido dentro de cada uma das matrizes: drinks, dinner e dessert 
+#print(food[0][0]) # food([x][y]) é o modo de identificação dos indices, em que x (drinks,dinner,dessert) são os indices da matiz food.
