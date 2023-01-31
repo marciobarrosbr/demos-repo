@@ -87,6 +87,7 @@
 #y = 2
 #z = 3
 
+#float("%0.2f" % (variable)) # essa função retorna as casa decimais pos ponto, 2 para dua casa, 3 para 3 casas e assim por diante
 #print(round(pi)) #round função matematica que arredonda o numero
 #print(math.ceil(pi)) #A funcão ceil(x)retornar o menor numero interiro maior ou igual a x. 
 #print(math.floor(pi)) #Similarmente, floor(x), retornar o maior numero inteiro menor ou igual a x
